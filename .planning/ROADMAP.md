@@ -12,7 +12,7 @@ Five phases that containerize an existing full-stack PV-Calculator application. 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Build Context Safety** - Create .dockerignore files to ensure correct, secure Docker build contexts
+- [x] **Phase 1: Build Context Safety** - Create .dockerignore files to ensure correct, secure Docker build contexts
 - [ ] **Phase 2: Server Container** - Multi-stage Dockerfile that compiles TypeScript and runs Express in production
 - [ ] **Phase 3: Client Container** - Multi-stage Dockerfile with Vite build and Nginx serving + reverse proxy
 - [ ] **Phase 4: Runtime Token Injection** - Inject Cesium Ion Token at container startup without baking it into the image
@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — Create .dockerignore files for client and server containers
+- [x] 01-01-PLAN.md — Create .dockerignore files for client and server containers
 
 ### Phase 2: Server Container
 **Goal**: A working production Docker image for the Express/TypeScript server that runs as non-root with NODE_ENV=production and exposes a /health endpoint
@@ -100,7 +100,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Build Context Safety | 0/1 | Not started | - |
+| 1. Build Context Safety | 1/1 | Complete | 2026-03-02 |
 | 2. Server Container | 0/2 | Not started | - |
 | 3. Client Container | 0/2 | Not started | - |
 | 4. Runtime Token Injection | 0/1 | Not started | - |
