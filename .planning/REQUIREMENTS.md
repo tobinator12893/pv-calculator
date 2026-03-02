@@ -9,7 +9,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Dockerfiles & Build
 
-- [ ] **BUILD-01**: Server has multi-stage Dockerfile (TS compile stage → node:24-bookworm-slim runtime)
+- [x] **BUILD-01**: Server has multi-stage Dockerfile (TS compile stage → node:24-bookworm-slim runtime)
 - [ ] **BUILD-02**: Client has multi-stage Dockerfile (Vite build stage → nginx:stable-alpine runtime)
 - [x] **BUILD-03**: Both containers have .dockerignore excluding node_modules, dist, .env, .git
 - [ ] **BUILD-04**: Package files copied before source code for layer cache optimization
@@ -26,8 +26,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Runtime & Secrets
 
 - [ ] **RUNTIME-01**: VITE_CESIUM_ION_TOKEN injected at container startup via entrypoint script (not baked into image)
-- [ ] **RUNTIME-02**: Server container runs with NODE_ENV=production
-- [ ] **RUNTIME-03**: Server has GET /health endpoint returning 200 OK
+- [x] **RUNTIME-02**: Server container runs with NODE_ENV=production
+- [x] **RUNTIME-03**: Server has GET /health endpoint returning 200 OK
 - [ ] **RUNTIME-04**: Both containers have restart policies (unless-stopped)
 
 ### Orchestration
@@ -66,7 +66,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BUILD-01 | Phase 2 | Pending |
+| BUILD-01 | Phase 2 | Complete |
 | BUILD-02 | Phase 3 | Pending |
 | BUILD-03 | Phase 1 | Complete |
 | BUILD-04 | Phase 3 | Pending |
@@ -77,8 +77,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NGINX-04 | Phase 3 | Pending |
 | NGINX-05 | Phase 3 | Pending |
 | RUNTIME-01 | Phase 4 | Pending |
-| RUNTIME-02 | Phase 2 | Pending |
-| RUNTIME-03 | Phase 2 | Pending |
+| RUNTIME-02 | Phase 2 | Complete |
+| RUNTIME-03 | Phase 2 | Complete |
 | RUNTIME-04 | Phase 5 | Pending |
 | COMPOSE-01 | Phase 5 | Pending |
 | COMPOSE-02 | Phase 5 | Pending |
@@ -91,4 +91,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-03-02*
-*Last updated: 2026-03-02 after Phase 1 completion (BUILD-03 complete)*
+*Last updated: 2026-03-02 after Phase 2 completion (BUILD-01, RUNTIME-02, RUNTIME-03 complete)*
