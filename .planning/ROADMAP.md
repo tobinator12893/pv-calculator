@@ -43,11 +43,10 @@ Plans:
   3. `curl http://localhost:3001/health` returns HTTP 200 OK
   4. The container process runs as a non-root user (verifiable via `docker exec ... id`)
   5. The NODE_ENV environment variable is set to production inside the running container
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 02-01: Write multi-stage server Dockerfile (TypeScript compile stage + slim production runtime stage)
-- [ ] 02-02: Add GET /health endpoint to Express server if not already present; verify non-root user and NODE_ENV
+- [ ] 02-01-PLAN.md — Add /health endpoint and write multi-stage server Dockerfile
 
 ### Phase 3: Client Container
 **Goal**: A working production Docker image for the React/Vite frontend served by Nginx, with SPA routing, /api reverse proxy, gzip compression, static asset cache headers, and security headers
@@ -101,7 +100,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Build Context Safety | 1/1 | Complete | 2026-03-02 |
-| 2. Server Container | 0/2 | Not started | - |
+| 2. Server Container | 0/1 | Not started | - |
 | 3. Client Container | 0/2 | Not started | - |
 | 4. Runtime Token Injection | 0/1 | Not started | - |
 | 5. Compose Integration | 0/1 | Not started | - |
