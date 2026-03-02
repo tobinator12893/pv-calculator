@@ -13,7 +13,7 @@ Five phases that containerize an existing full-stack PV-Calculator application. 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Build Context Safety** - Create .dockerignore files to ensure correct, secure Docker build contexts
-- [ ] **Phase 2: Server Container** - Multi-stage Dockerfile that compiles TypeScript and runs Express in production
+- [x] **Phase 2: Server Container** - Multi-stage Dockerfile that compiles TypeScript and runs Express in production
 - [ ] **Phase 3: Client Container** - Multi-stage Dockerfile with Vite build and Nginx serving + reverse proxy
 - [ ] **Phase 4: Runtime Token Injection** - Inject Cesium Ion Token at container startup without baking it into the image
 - [ ] **Phase 5: Compose Integration** - Wire both containers together and validate full end-to-end functionality
@@ -46,7 +46,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md — Add /health endpoint and write multi-stage server Dockerfile
+- [x] 02-01-PLAN.md — Add /health endpoint and write multi-stage server Dockerfile
 
 ### Phase 3: Client Container
 **Goal**: A working production Docker image for the React/Vite frontend served by Nginx, with SPA routing, /api reverse proxy, gzip compression, static asset cache headers, and security headers
@@ -58,11 +58,10 @@ Plans:
   3. Requests to /api/* are forwarded to the server container and return valid API responses
   4. Response headers include gzip encoding for JS/CSS/JSON assets
   5. Security headers (X-Frame-Options, X-Content-Type-Options) are present on responses
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 03-01: Write multi-stage client Dockerfile (Vite build stage + nginx:stable-alpine runtime stage); verify layer cache order and non-root user for both Dockerfiles
-- [ ] 03-02: Write nginx.conf with SPA fallback routing, /api reverse proxy, gzip, cache headers, and security headers
+- [ ] 03-01-PLAN.md — Write nginx.conf and client Dockerfile, build and verify Docker image with SPA fallback, gzip, cache headers, security headers, non-root nginx
 
 ### Phase 4: Runtime Token Injection
 **Goal**: The client container receives VITE_CESIUM_ION_TOKEN at startup via environment variable and the Cesium map renders correctly, with the token never stored in any image layer
@@ -100,7 +99,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Build Context Safety | 1/1 | Complete | 2026-03-02 |
-| 2. Server Container | 0/1 | Not started | - |
-| 3. Client Container | 0/2 | Not started | - |
+| 2. Server Container | 1/1 | Complete | 2026-03-02 |
+| 3. Client Container | 0/1 | Not started | - |
 | 4. Runtime Token Injection | 0/1 | Not started | - |
 | 5. Compose Integration | 0/1 | Not started | - |
