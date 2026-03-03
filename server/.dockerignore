@@ -1,0 +1,29 @@
+# Source: https://docs.docker.com/build/concepts/context/#dockerignore-files
+
+# Dependencies — rebuilt inside container via npm ci
+node_modules
+**/node_modules
+
+# Compiled TypeScript output — produced inside container by tsc
+dist
+
+# Secrets — proactive exclusion; prevents leaks if .env is added during development
+.env
+.env.*
+!.env.example
+
+# Git metadata — not needed in image
+.git
+.gitignore
+
+# Editor/OS artifacts
+.DS_Store
+.vscode
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# TypeScript build info
+*.tsbuildinfo
