@@ -1,0 +1,38 @@
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-white);
+  color: var(--color-text);
+}
+
+.results-floating {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 420px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: rgba(200, 200, 210, 0.45);
+  backdrop-filter: blur(40px) saturate(1.8);
+  -webkit-backdrop-filter: blur(40px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 32px 40px;
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.results-floating::-webkit-scrollbar {
+  width: 6px;
+}
+
+.results-floating::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.results-floating::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+}
