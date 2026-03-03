@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "dependencies": {
+    "axios": "^1.13.6",
+    "jsonwebtoken": "^9.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.0",
+    "@vercel/node": "^5.6.10"
+  }
+}
